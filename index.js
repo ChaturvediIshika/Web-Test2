@@ -44,12 +44,12 @@ function getData(title)
 
     
     
-document.querySelector(".btn").onclick=fun(event);
-function fun(event){
-    var search=document.getElementById("search");
-    var title=search.innerText;
+document.getElementById('btn').addEventListener("click",display);
+
+function display(){
+    var title=document.getElementById('search').value;
     getData(title);
 }
-getData("friends");
+
 
 

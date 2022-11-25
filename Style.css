@@ -14,7 +14,7 @@ input{
     margin: 5px;
     font-size: 25px;
 }
-.btn{
+#btn{
     height: 30px;
     width: 100px;
 }
