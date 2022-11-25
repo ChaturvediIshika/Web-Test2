@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style.css">
+    <title>Document</title>
+    <style>
+        input[type="radio"]{
+        appearance: none;
+        border: 2px solid black;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        background-color: white;
+      }
+      input[type="radio"]:checked{
+        background-color: var(--rcolor);
+      }
+      :root:has(#gray:checked){
+        --rcolor:gray;
+      }
+      :root:has(#blue:checked){
+        --rcolor:blue;
+      }
+      :root:has(#pink:checked){
+        --rcolor:pink;
+      }
+      :root:has(#yellow:checked){
+        --rcolor:yellow;
+      }
+      :root:has(#green:checked){
+        --rcolor:green;
+      }
+      body{
+        background-color: var(--rcolor);
+      }
+      legend{
+        background-color: white;
+      }
+    </style>
+</head>
+<body>
+    <div id="head"> <div class="text"><u><h1>Search Your Favourite Movies</h1></u></div>
+        <form action="">
+            <input id="search" type="text" placeholder="Search Here...">
+            <button class="btn" >Search</button>
+        </form>
+    </div>
+    <div id="theme">
+        <form >
+            <legend>
+              <input type="radio" name="theme" id="gray" style="border:3px solid gray;">
+              <input type="radio" name="theme" id="pink" style="border:3px solid pink;"> 
+              <input type="radio" name="theme" id="blue" style="border:3px solid blue;"> 
+              <input type="radio" name="theme" id="green" style="border:3px solid green;"> 
+              <input type="radio" name="theme" id="yellow" style="border:3px solid yellow;">
+            </legend>
+          </form>
+    </div>
+    <div id="content"></div>
+    <script src="./index.js"></script>
+</body>
+</html>
